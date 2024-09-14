@@ -1,0 +1,95 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+/* ###########################################################################*/
+/* Área do cabeçalho*/
+
+/* Cabeçalho */
+header,
+footer {
+    color: #fbfbfb;
+    text-shadow: 1px 1px 4px #00ffff;
+
+    background-color: rgb(5,7,7);
+    padding: 16px; /* Colocando uma borda em toda lateral de 16px*/
+    border-bottom: 1px solid #cccc; /* Colocando uma linha de 1px solida cor cinza na borda inferior*/
+    margin-bottom: 10px; /* margem inferior de 10px para separar o cabeçalho do corpo da página */
+  }
+
+/* Cabeçalho e container*/
+header .container {
+    display: flex; /* Serve para colocar os itens dentro do header um ao lado do outro*/
+    justify-content: space-between;
+}
+
+/* container */
+/* Configuração de tamanho a alinhamento do cabeçalho */
+.container,
+.rodape {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+/* ###########################################################################*/
+/* Área do Menu*/
+.menu ul li,
+.menu ul li a {
+    display: inline; /* coloca os li um ao lado do outro*/
+    margin-right: 10px; /* Espaçamento entre os links do menu*/
+    cursor: pointer;
+
+    color: #fff;
+    text-decoration: none; /* Remove o sublinhado dos links do menu*/
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* ###########################################################################*/
+/* Área do Corpo da página*/
+
+/* conteudo */
+/* Aqui acertamos o tamanho das laterais que queremos para o a nossa página*/
+/* Exemplo: essa página ficará com o tamanho de layout padrão de 102
+px*/
+
+.conteudo { 
+    max-width: 1024px;
+    margin: 0 auto; /* Aqui configuramos o conteudo para ficar no centro da tela*/
+}
+
+.sobre {
+    display: flex;
+}
+
+.artigo h2,
+.artigo p {
+    padding: 8px;
+    color: #514 181 23;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+.sobre img {
+    width: 480px;
+}
+.sobre .artigo {
+
+}
+
+.rodape {
+    background-color: rgb(5,7,7);
+    color: #fbfbfb;
+    padding: 16px; /* Colocando uma borda em toda lateral de 16px*/
+    margin: 0 auto;
+
+}
+
+
+
+
+
