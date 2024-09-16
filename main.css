@@ -100,7 +100,13 @@ px*/
 /* ###########################################################################*/
 /* Seção Produtos da página*/
 
-.produtos h1 {
+.produtos #slide-img {
+    display: block;
+    margin-bottom: 25px;
+}
+
+.produtos h1,
+.produtos h2 {
     padding: 8px;
     border-bottom: 3px solid rgb(5, 7, 7);
     margin-bottom: 25px;
@@ -166,6 +172,7 @@ px*/
     }
 
     /* Area Produtos*/
+
     .descricao {
         margin-bottom: 25px;
     }
