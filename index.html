@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="./main.css">
 
     <title>Json Shoes</title>
@@ -14,27 +18,71 @@
             <nav class="menu">
                 <ul>
                     <li>
-                        <a href="#">Sobre</a>
+                        <a href="#sobre-a-pagina">Sobrea loja</a>
                     </li>
                     <li>
-                        <a href="#">Produtos</a>
+                        <a href="#produtos">Produtos</a>
                     </li>
                 </ul>
             </nav>
         </div>
     </header>
+
     <div class="conteudo">
-        <main>  <!-- Aqui serve apenas para delimitar ou dividir entre main e aside-->
+        <main id="sobre-a-pagina">  <!-- Aqui serve apenas para delimitar ou dividir entre main e aside-->
             <section class="sobre">
-                    <img src="./faxada-loja-json Shoes.jpeg" alt="">
-                    <div class="artigo">
+                    <img src="./faxada-loja-json Shoes.jpeg" alt="Faxada da loja Json Sohes">
+                    <article class="artigo">
                         <h2>Sobre a Loja</h2>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente distinctio rem iure nobis eaque blanditiis. Quasi, nobis impedit odio quis illo eos praesentium sit tempore nisi ex dolorum explicabo dolorem?</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente distinctio rem iure nobis eaque blanditiis. Quasi, nobis impedit odio quis illo eos praesentium sit tempore nisi ex dolorum explicabo dolorem?</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente distinctio rem iure nobis eaque blanditiis. Quasi, nobis impedit odio quis illo eos praesentium sit tempore nisi ex dolorum explicabo dolorem?</p>
-                    
-                    </div>
+                    </article>
             </section>
+            <section class="produtos">
+                <h1>Produtos</h1>
+                <div class="secao-jovem">
+                    <div class="calcados">
+                        <img src="./Bota Dourada.png" alt="Bota dourada">
+                        <article class="descricao">
+                            <h2>Bota Dourada Estrela</h2>
+                            <p>Bota durada estilo estrela da musica, disponíveis nos tamanhos: 36, 40", 42 e 43 </p>
+                            <form>
+                                <button type="submit">Adicionar ao carrinho</button>
+                            </form>
+                        </article>
+                    </div>
+                    <div class="calcados">
+                        <img src="./Tenis prata.png" alt="Bota dourada">
+                        <article class="descricao">
+                            <h2>Sapatenis Prata </h2>
+                            <p>Bota durada estilo estrela da musica, disponíveis nos tamanhos: 36, 40", 42 e 43 </p>
+                            <form>
+                                <button type="submit">Adicionar ao carrinho</button>
+                            </form>
+                        </article>
+                    </div>
+                    <div class="calcados">
+                        <img src="./Social bran preto prata.png" alt="Bota dourada">
+                        <article class="descricao">
+                            <h2>Tenis Social Casual</h2>
+                            <p>Bota durada estilo estrela da musica, disponíveis nos tamanhos: 36, 40", 42 e 43 </p>
+                            <form>
+                                <button type="submit">Adicionar ao carrinho</button>
+                            </form>
+                        </article>
+                    </div>
+                    <div class="calcados">
+                        <img src="./Sapatenis verde.png" alt="Bota dourada">
+                        <article class="descricao">
+                            <h2>Bota verde Social</h2>
+                            <p>Bota durada estilo estrela da musica, disponíveis nos tamanhos: 36, 40", 42 e 43 </p>
+                            <form>
+                                <button type="submit">Adicionar ao carrinho</button>
+                            </form>
+                        </article>
+                    </div>
+                </div>
+        </section>
         </main>
         <aside> <!-- Este tambem só serve para delimitar espaços entre main e aside-->
 
@@ -42,7 +90,7 @@
     </div>
     <footer>
         <div class="rodape">
-        <p> Json Shoes Todos os direitos Reservados &copy</p>
+        <p>&copy Json Shoes - Todos os direitos Reservados</p>
         </div>
     </footer>
 </body>

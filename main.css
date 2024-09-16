@@ -5,33 +5,38 @@
     font-family: Helvetica, sans-serif;
 }
 
+body{
+    background-color: rgb(237, 237, 237);
+}
+
 /* ###########################################################################*/
 /* Área do cabeçalho*/
 
-/* Cabeçalho */
-header,
-footer {
-    color: #fbfbfb;
-    text-shadow: 1px 1px 4px #00ffff;
-
-    background-color: rgb(5,7,7);
-    padding: 16px; /* Colocando uma borda em toda lateral de 16px*/
-    border-bottom: 1px solid #cccc; /* Colocando uma linha de 1px solida cor cinza na borda inferior*/
-    margin-bottom: 10px; /* margem inferior de 10px para separar o cabeçalho do corpo da página */
-  }
+/* Aqui do container padronizamos o tamanho maximo da largura da página */
+/* Também foi padronizado o rodapé que está dentro de footer, lembre-se apenas o rodapé o footer continua sem*/
+.container,
+.rodape {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 7px;
+}
 
 /* Cabeçalho e container*/
 header .container {
     display: flex; /* Serve para colocar os itens dentro do header um ao lado do outro*/
     justify-content: space-between;
+    align-items: center; /* Aqui colocamos os itens logicamente ao centro no container*/
 }
 
-/* container */
-/* Configuração de tamanho a alinhamento do cabeçalho */
-.container,
-.rodape {
-    width: 1024px;
-    margin: 0 auto;
+/* Cabeçalho */
+header,
+footer {
+    padding: 16px; /* Colocando uma borda em toda lateral de 16px*/
+    border-bottom: 1px solid #f2f2f2cc;/* Colocando uma linha de 1px solida cor cinza na borda inferior*/
+    color: #fbfbfb;
+    text-shadow: 1px 1px 3px #00ffff;
+    background-color: rgb(5,7,7);
 }
 
 /* ###########################################################################*/
@@ -44,52 +49,132 @@ header .container {
 
     color: #fff;
     text-decoration: none; /* Remove o sublinhado dos links do menu*/
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1.2em;
     font-weight: bold;
 }
 
 /* ###########################################################################*/
-/* Área do Corpo da página*/
+/* Seção Sobre da página*/
 
-/* conteudo */
+/* Sobre */
 /* Aqui acertamos o tamanho das laterais que queremos para o a nossa página*/
 /* Exemplo: essa página ficará com o tamanho de layout padrão de 102
 px*/
 
-.conteudo { 
-    max-width: 1024px;
-    margin: 0 auto; /* Aqui configuramos o conteudo para ficar no centro da tela*/
+.conteudo {
+    display: grid;
+    max-width: 1024px; /* Aplicado max-width: 1024px para o conteudo ocupar apenas este tamanho*/
+    margin: 0 auto; /* Aplicado margin "0" e "auto" para que o conteudo fique sempre no centro da tela */
 }
 
-.sobre {
+.conteudo .sobre{
     display: flex;
 }
 
-.artigo h2,
-.artigo p {
-    padding: 8px;
-    color: #514 181 23;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: justify;
+.sobre{
+    max-width: 1024px;
+    max-width: auto;
 }
 
 .sobre img {
-    width: 480px;
-}
-.sobre .artigo {
-
+    max-width: 480px;
+    margin: 25px 7px 25px 7px;
 }
 
-.rodape {
-    background-color: rgb(5,7,7);
-    color: #fbfbfb;
-    padding: 16px; /* Colocando uma borda em toda lateral de 16px*/
-    margin: 0 auto;
-
+.artigo {
+    margin: 25px 16px;
+}
+.artigo h2 {
+    padding: 8px;
+    border-bottom: 3px solid rgb(5, 7, 7);
+    margin-bottom: 25px;
+    font-size: 1.5em;
+}
+.artigo p {
+    font-size: 1.2em;
+    font-family: "Roboto", sans-serif;
+    text-align: justify;
 }
 
+/* ###########################################################################*/
+/* Seção Produtos da página*/
 
+.produtos h1 {
+    padding: 8px;
+    border-bottom: 3px solid rgb(5, 7, 7);
+    margin-bottom: 25px;
+}
+
+.secao-jovem {
+    display: grid;
+    grid-template-columns: 24.3% 24.3% 24.3% 24.3%;
+    column-gap: 1%;
+    padding: 7px;
+}
+
+.calcados img {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 32px;
+}
+.calcados h2,
+.calcados h3 {
+    text-align: justify;
+    margin-bottom: 8px;
+}
+.calcados form button {
+    border: none;
+    padding: 5px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 3px;
+    cursor: pointer;
+    width: 250px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* ###########################################################################*/
+/* Área da Tela de Smartophone modo retrato*/
+@media screen and (max-width: 640px) {
+
+    .conteudo {
+        display: block;
+    }
+
+    header {
+        margin-bottom: 25px;
+    }
+
+    /* Area Sobre*/
+    /* Configurado as seções principais para economizar já que conicidem em 4 ou mais itens*/
+    .sobre, .produtos,
+    .secao-jovem {
+        display: flex;
+        flex-direction: column;
+        padding: 7px;
+    }
+
+    .sobre img, 
+    .secao-jovem img {
+        max-width: 100%;
+    }
+
+    .artigo h2 {
+        padding-bottom: 16px;
+    }
+
+    /* Area Produtos*/
+    .descricao {
+        margin-bottom: 25px;
+    }
+
+    .descricao h2 {
+        margin-bottom: 16px;
+    }
+
+}
 
 
 
